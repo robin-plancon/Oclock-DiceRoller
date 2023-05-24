@@ -9,17 +9,17 @@ const generate_number = (max, min = 0) => {
 // fonction qui affiche le dé sur la page prenant en paramètre la valeur du dé
 const display_dice = (result, player) => {
     // création de la div et ajout de la class dice à celle-ci
-    const dice_div = document.createElement("div");
-    dice_div.classList.add("dice");
+    const divDice = document.createElement("div");
+    divDice.classList.add("dice");
     // ajout de la div créée dans la div player
     if(player === "player"){
-        document.querySelector("#player").appendChild(dice_div);
+        document.querySelector("#player").appendChild(divDice);
     } else if (player === "dealer") {
-        document.querySelector("#dealer").appendChild(dice_div);
+        document.querySelector("#dealer").appendChild(divDice);
     }
     
     // modification du background position pour correspondre à la valeur du dé
-    dice_div.style.backgroundPositionX = `-${(result - 1) * 100}px`;
+    divDice.style.backgroundPositionX = `-${(result - 1) * 100}px`;
 };
 
 // fonction qui génèrent les lancers de dés prenant en paramètre 
