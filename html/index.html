@@ -8,6 +8,15 @@
 </head>
 <body>
     <!-- Eh toi là, inutile de modifier le HTML : l'objectif est d'insérer des élements via JS ! Bonne chance ! -->
+    <div class="options">
+        <label for="number_of_dices">Nombres de dés: </label>
+        <input type="number" name="number_of_dices" id="number_of_dices">
+        <label for="solo">solo</label>
+        <input type="radio" name="players" id="solo" value="solo" checked>
+        <label for="duo">duo</label>
+        <input type="radio" name="players" id="duo" value="duo">
+        <button id="start_game">lancer</button>
+    </div>
     <div id="app">
         <div class="board" id="player"></div>
     </div>
